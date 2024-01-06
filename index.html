@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>高分子預測</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- 引入 Kekule.js -->
+    <script src="https://cdn.jsdelivr.net/npm/kekule/dist/kekule.js?modules=chemWidget,algorithm"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/kekule/dist/themes/default/kekule.css" />
+    <style>
+        /* 使用CSS选择器来指定文本输入框的样式 */
+        input[type="text"] {
+            color: red;
+            font-size: 40px; /* 将文本颜色设置为红色 */
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="alt">
+        <h1>高分子預測</h1>
+    </header>
+
+    <div id="wrapper">
+        <!-- 化學結構編輯器容器 -->
+        <div id="editor" style="width: 600px; height: 400px;"></div>
+       
+        
+        <!-- SMILES 顯示 -->
+        <div id="smilesOutput" style="color: #000000; font-weight: bold; font-size: 20px">SMILES: </div>
+
+        <!-- 預測表單 -->
+        <form id="calculationForm">
+            <label for="donorsmiles">Donor smiles/name:</label>
+            <input type="text" id="donorsmiles" placeholder="PBDB-T (PM6)">
+            <style>
+                #donorsmiles {
+                    width: 600px;
+                    height: 60px;
+                }
+            </style>
+            <button id="convertButton1">轉換</button>
+            <label for="acceptorsmiles">Acceptor smiles/name:</label>
+            <input type="text" id="acceptorsmiles" placeholder="Y6">
+            <style>
+                #acceptorsmiles {
+                    width: 600px;
+                    height: 60px;
+                }
+            </style>
+            <button id="convertButton2">轉換</button>
+            <br></br>
+            <button type="button" id="calculateButton">預測/查詢</button>
+        </form>
+        <div id="result" style="color: #000000; font-weight: bold; font-size: 20px;">結果</div>
+    </div>
+
+    <!-- JavaScript 處理邏輯 -->
+    <script src="handleChemStructure.js"></script>
+    <script src="handlePrediction.js"></script>
+    
+</body>
+</html>
