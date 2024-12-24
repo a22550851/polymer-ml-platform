@@ -2597,7 +2597,7 @@ async function fetchPropertiesPredictionData(donorSmiles = null, acceptorSmiles 
         if (donorSmiles) bodyData.donorsmiles = donorSmiles;
         if (acceptorSmiles) bodyData.acceptorsmiles = acceptorSmiles;
 
-        const response = await fetch('https://polymer-ml-platform-server.online/properties_predict', {
+        const response = await fetch('https://polymer-ml-platform-server.site/properties_predict', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -2632,7 +2632,7 @@ async function fetchSpectrumPredictionData(donorSmiles = null, acceptorSmiles = 
         if (donorSmiles) bodyData.donorsmiles = donorSmiles;
         if (acceptorSmiles) bodyData.acceptorsmiles = acceptorSmiles;
 
-        const response = await fetch('https://polymer-ml-platform-server.online/spectrum_predict', {
+        const response = await fetch('https://polymer-ml-platform-server.site/spectrum_predict', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -3153,7 +3153,7 @@ async function fetchPerformancePredictionData(donorSmiles = null, acceptorSmiles
         if (donorSmiles) bodyData.donorsmiles = donorSmiles;
         if (acceptorSmiles) bodyData.acceptorsmiles = acceptorSmiles;
 
-        const response = await fetch('https://polymer-ml-platform-server.online/performance_predict', {
+        const response = await fetch('https://polymer-ml-platform-server.site/performance_predict', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
