@@ -47,7 +47,7 @@ function renderSpectrumChartindatabase(spectrumDataSets, labels, chartId) {
             range: [400, 800]
         },
         yaxis: {
-            title: 'Absorption Intensity',
+            title: 'Absorbance',
             zeroline: false
         }
     };
@@ -80,7 +80,7 @@ function renderSpectrumChart(spectrumData, label, chartId) {
             range: [400, 800] // 设置 X 轴范围
         },
         yaxis: {
-            title: 'Absorption Intensity', // Y 轴标题
+            title: 'Absorbance', // Y 轴标题
             zeroline: false
         }
     };
